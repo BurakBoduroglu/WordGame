@@ -348,6 +348,9 @@ public class GamePane extends Pane {
         btnOK.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
+                listView.getItems().clear();
+                score = 0;
+                scorelbl.setText("0");
                 personalPuzzle();
             }
         });
@@ -380,7 +383,7 @@ public class GamePane extends Pane {
             @Override
             public void handle(MouseEvent mouseEvent) {
                 if (textField.getText().equals("Click a button...")) {
-                    textField.setText("");
+                    textField.setText(" ");
                 }
                 if (textField.getText().length() < 20) {
                     String text = textField.getText();
