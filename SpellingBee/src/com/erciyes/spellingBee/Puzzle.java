@@ -51,11 +51,12 @@ public class Puzzle {
                 ss.add(word.charAt(i));
             }
             if(ss.size() == 7){
-                pangrams.add(word);
+                if(!pangrams.contains(word)){
+                    pangrams.add(word);
+                }
             }
             ss.clear();
         }
-
     }
     public void createPuzzle() throws IOException {
 
